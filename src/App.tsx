@@ -1,6 +1,6 @@
 import React from "react";
-import NoClicked from "./components/NoClicked";
 import Clicked from "./components/Clicked";
+import { Button } from "@mui/material";
 
 const App: React.FC = () => {
   const [clicked, setClicked] = React.useState(true);
@@ -12,7 +12,9 @@ const App: React.FC = () => {
   return clicked ? (
     <Clicked toggleClicked={toggleClicked} />
   ) : (
-    <NoClicked toggleClicked={toggleClicked} />
+    <Button onClick={toggleClicked} variant="contained">
+      Enjoy
+    </Button>
   );
 };
 
